@@ -38,6 +38,12 @@ export default {
   flex-direction: row;
   align-items: center;
   
+  @include laptop {
+    .switchButtonOptions {
+      font-size: 14px;
+    }
+  }
+
   .switch-button {
     
     height: 1.0em;

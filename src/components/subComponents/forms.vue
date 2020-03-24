@@ -168,6 +168,9 @@ form {
   .productImage {
     max-width: 1140px;
     height: 110px;
+    margin: 20px;
+    border: 1px solid #E43636;
+    border-radius: 10px;
   }
 
   .placeButton {
