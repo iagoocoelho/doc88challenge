@@ -50,7 +50,6 @@ export default {
     h4 {
       flex: 2;
       align-self: center;
-      margin: 0 60px;
     }
 
     .switch-button-control {
@@ -104,7 +103,23 @@ export default {
   }
 
     @include tablet {
-      color: red;
+      width: 75%;
+
+      .headerInsert {
+          padding: 15px 30px;
+          display: block;
+          height: auto;
+
+        h4 {
+          font: 700 18px Roboto;
+          text-align: center;
+          padding: 15px 0;
+        }
+
+        .switch-button-control {
+          place-content: center;
+        }
+      }
     }
 
 }

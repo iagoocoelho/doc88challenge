@@ -1,8 +1,10 @@
 <template>
   <div id="headerComponent">
     <div class="logoPastelDeIdeias"><img src="../assets/Logo.svg" alt=""></div>
-    <div class="pasteisImg"><img src="../assets/pasteis-img.png" alt=""></div>
-    <div class="pastelParalax"><img src="../assets/pastel-paralax.png" alt=""></div>
+    <div class="pasteisImg"></div>
+    <div class="pastelParalax">
+      <!-- <img src="../assets/pastel-paralax.png" alt=""> -->
+    </div>
   </div>
 </template>
 
@@ -21,6 +23,8 @@
 
   .logoPastelDeIdeias {
     margin: 0 30%;
+    position: relative;
+    left: -60px;
 
     img {
       width: 100%;
@@ -31,41 +35,61 @@
   .pasteisImg {
     
     position: relative;
-    right: 370px;
-    bottom: 168px;
+    top: -167px;
+    left: -18%;
+    width: 19%;
+    height: 312px;
     z-index: 0;
+    float: right;
 
-    img {
-      float: right;
-      width: 13%;
-      height: 392px;
-    }
+    background: transparent url(../assets/pasteis-img.png) no-repeat padding-box;
+    background-size: contain;
+    background-position-y: center;
   }
 
   .pastelParalax {
 
+    height: 555px;
+    width: 29%;
+    float: left;
     position: absolute;
-    left: 130px;
-    top: 20px;
     z-index: 2;
-    // width: 100%;
+    top: 34px;
+    left: 3%;
 
-    img {
-      width: 25%;
-      height: 100%;
-    }
+    background: transparent url(../assets/pastel-paralax.png) no-repeat;
+    background-size: contain;
   }
 
   // MEDIA QUERY -------------------------------------------------------------------
   @include laptop {
     .pasteisImg {
-      right: 150px;
-      bottom: 150px;
+      width: 15%;
+    }
+
+    .pastelParalax {
+      width: 25%;
+      top: 53px;
+      left: 1%;
     }
   }
 
   @include tablet {
+    .logoPastelDeIdeias {
+      left: 0;
+    }
 
+    .pasteisImg {
+      width: 12%;
+      left: -17%;
+      top: -161px;
+    }
+    
+    .pastelParalax {
+      width: 29%;
+      left: -2%;
+      top: 36px;
+    }
   }
 }
 
