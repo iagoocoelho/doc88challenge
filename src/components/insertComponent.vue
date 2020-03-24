@@ -30,10 +30,14 @@ export default {
 <style scoped lang="scss">
 
 #insertComponent {
-  max-width: 1180px;
+  width: 61%;
   margin: 0 auto;
   box-shadow: 0px 0px 30px #740B0B45;
   border-radius: 20px;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 1;
+  
 
   .headerInsert {
 
@@ -83,5 +87,25 @@ export default {
       }
     }
   }
+
+  // MEDIA QUERY -------------------------------------------------------------------
+
+  @include laptop {
+    width: 70%;
+
+    .headerInsert {
+      padding: 0 20px;
+
+      h4 {
+        font: 700 14px Roboto;
+        margin: 0;
+      }
+    }
+  }
+
+    @include tablet {
+      color: red;
+    }
+
 }
 </style>

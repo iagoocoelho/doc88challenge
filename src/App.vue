@@ -24,7 +24,10 @@ export default {
 <style lang="scss">
 #app {
   max-width: 1920px;
+  margin: 0 auto;
   font-family: 'Roboto', sans-serif;
+  background: transparent url(./assets/wave.svg) no-repeat padding-box;
+  background-size: contain;
 
   h4, .resultTittle span {
     font-family: 'Roboto', sans-serif;

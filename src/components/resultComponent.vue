@@ -32,14 +32,12 @@ export default {
 <style scoped lang="scss">
 
 #resultComponent {
-  max-width: 1070px;
-  margin: 0 auto;
 
   .resultTittle {
     height: 1px;
     background-color: #E43636 ;
     text-align: center;
-    margin: 100px 0;
+    margin: 50px 0;
     
       span {
         background-color: #ffffff;
@@ -50,8 +48,10 @@ export default {
   }
 
   .resultContent {
-  display: flex;
-  margin-bottom: 50px;
+    display: flex;
+    margin-bottom: 50px;
+    max-width: 60%;
+    margin: 50px auto;
 
     .resultInfo {
       width: 100%;
@@ -102,6 +102,42 @@ export default {
         }
       }
     }
+  }
+
+  // MEDIA QUERY -------------------------------------------------------------------
+  @include laptop {
+    .resultContent {
+      max-width: 70%;
+
+      .resultInfo {
+        height: 180px;
+
+        .resultImage {
+          position: initial;
+        }
+
+        h3 {
+          font: 700 24px Roboto;
+          padding: 20px 0 20px 200px;
+        }
+
+        span {
+
+          h4 {
+            padding-left: 20px;
+            font: 700 18px Roboto;
+          }
+
+          p {
+            font: 700 18px Roboto;
+          }
+        }
+      }
+    }
+  }
+
+  @include tablet {
+
   }
 }
 </style>
