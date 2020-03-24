@@ -205,6 +205,38 @@ form {
       }
     }
   }
+
+  // MEDIA QUERY -------------------------------------------------------------------
+
+  @include laptop {
+
+  }
+
+  @include tablet {
+    bottom: 0px;
+
+    .productGeneralInfo {
+      flex-direction: column;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    .productDescription {
+      margin: 1em 0;
+    }
+
+    .placeButton {
+      padding-bottom: 18px;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        margin: 15px 35px;
+      }
+    }
+  }
 }
 
 </style>

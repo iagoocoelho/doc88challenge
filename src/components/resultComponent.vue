@@ -1,20 +1,25 @@
 <template>
   <div id="resultComponent">
-    <div class="resultTittle"><span>Veja como será apresentado ao cliente</span></div>
+    <div class="resultDivision"><span>Veja como será apresentado ao cliente</span></div>
     <div class="resultContent">
       <div class="resultInfo">
-        <div class="resultImage"></div>
+        
+        <span class="resultHeader">
+          <h3>"Titulo do pedido"</h3>
+          <p>R$ 00,00</p>
+        </span>
+        
 
-        <h3>"Titulo do pedido"</h3>
+        <div class="resultImage"></div>
 
         <span>
           <h4>Sabor:</h4>
-          <p>Teste</p>
+          <p>01 234 567 89012 3456789 012345 67890 1234 567 89012 345 67890123456789</p>
         </span>
 
         <span>
           <h4>Descrição:</h4>
-          <p>Teste</p>
+          <p>01 234567 89012 3456789 012345 67890 1234 56 789012 345 67890123456789</p>
         </span>
 
       </div>
@@ -33,7 +38,7 @@ export default {
 
 #resultComponent {
 
-  .resultTittle {
+  .resultDivision {
     height: 1px;
     background-color: #E43636 ;
     text-align: center;
@@ -55,30 +60,46 @@ export default {
 
     .resultInfo {
       width: 100%;
-      height: 221px;
+      height: 100%;
       box-shadow: 0px 0px 30px #740B0B45;
       border-radius: 20px;
       position: relative;
 
+      .resultHeader {
+          background-color: #E43636;
+          border-radius: 20px 20px 0px 0px;
+          margin-bottom: 16px;
+
+          h3 {
+            align-self: center;
+            width: 70%;
+            padding-left: 110px;
+          }
+
+          p {
+            width: 30%;
+            text-align: right;
+            font: 700 26px Roboto;
+            font-style: italic;
+            color: #ffffff;
+            padding-right: 30px;
+            align-self: center;
+          }
+      }
+
+
+
       .resultImage {
-        align-self: center;
-        display: block;
         position: absolute;
         width: 180px;
         height: 100%;
         left: -120px;
         float: left;
-
+        top: 0;
         background: transparent url(../assets/pastel-img.png) no-repeat padding-box;
         background-position: center;
       }
 
-      h3 {
-        background-color: #E43636;
-        border-radius: 20px 20px 0px 0px;
-        padding: 20px 110px;
-        margin-bottom: 16px;
-      }
       span {
         display: flex;
 
@@ -96,10 +117,6 @@ export default {
           padding: 0 10px;
           margin: 16px 0;
         }
-
-        &:last-child h4, &:last-child p {
-          margin: 0;
-        }
       }
     }
   }
@@ -110,26 +127,31 @@ export default {
       max-width: 70%;
 
       .resultInfo {
-        height: 180px;
+
+        .resultHeader {
+
+          h3 {
+            font: 700 24px Roboto;
+            padding: 20px 0 20px 20px;
+            margin-bottom: 0;
+            text-align: center;
+          }
+        }
 
         .resultImage {
           position: initial;
-        }
-
-        h3 {
-          font: 700 24px Roboto;
-          padding: 20px 0 20px 200px;
+          height: 180px;
         }
 
         span {
 
           h4 {
             padding-left: 20px;
-            font: 700 18px Roboto;
+            font: 700 20px Roboto;
           }
 
           p {
-            font: 700 18px Roboto;
+            font: 400 20px Roboto;
           }
         }
       }
@@ -138,6 +160,41 @@ export default {
 
   @include tablet {
 
+    .resultContent {
+      max-width: 75%;
+
+      .resultInfo {
+
+        .resultHeader {
+
+          h3 {
+            font: 700 24px Roboto;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 0;
+          }
+        }
+
+        .resultImage {
+          position: initial;
+          height: 180px;
+          float: none;
+          margin: 0 auto;
+        }
+
+        span {
+
+          h4 {
+            padding-left: 20px;
+            font: 700 20px Roboto;
+          }
+
+          p {
+            font: 400 18px Roboto;
+          }
+        }
+      }
+    }
   }
 }
 </style>
