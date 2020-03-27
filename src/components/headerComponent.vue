@@ -2,9 +2,7 @@
   <div id="headerComponent">
     <div class="logoPastelDeIdeias"><img src="../assets/Logo.svg" alt=""></div>
     <div class="pasteisImg"></div>
-    <div class="pastelParalax">
-      <!-- <img src="../assets/pastel-paralax.png" alt=""> -->
-    </div>
+    <div class="pastelParalax"></div>
   </div>
 </template>
 
@@ -53,7 +51,7 @@
     width: 29%;
     float: left;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     top: 34px;
     left: 3%;
 
