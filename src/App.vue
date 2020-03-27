@@ -2,21 +2,18 @@
   <div id="app">
     <headerComponent/>
     <insertComponent/>
-    <resultComponent/>
   </div>
 </template>
 
 <script>
 import headerComponent from './components/headerComponent.vue'
 import insertComponent from './components/insertComponent.vue'
-import resultComponent from './components/resultComponent.vue'
 
 export default {
   name: 'App',
   components: {
     headerComponent,
-    insertComponent,
-    resultComponent
+    insertComponent
   }
 }
 </script>
@@ -26,10 +23,15 @@ export default {
   max-width: 1920px;
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
-  background: transparent url(./assets/wave.svg) no-repeat padding-box;
-  background-size: contain;
+  background: url(./assets/wave.svg) ,radial-gradient(closest-side at 50% 50%, #FFFFFF 0%, #FFFFFF 67%, #FFFFFF00 100%) 0% 0% no-repeat, url(./assets/pattern.png);
+  background-repeat: no-repeat, 
+    no-repeat,
+    repeat;
+  background-size: contain,
+  cover,
+  auto;
 
-  h4, .resultTittle span {
+  h4, .resultDivision span {
     font-family: 'Roboto', sans-serif;
     font: 700 24px Roboto;
     font-style: italic;
@@ -49,10 +51,15 @@ export default {
     padding: 0;
   }
 
-  p input::placeholder, .switchButtonOptions {
+  input::placeholder, .switchButtonOptions, .uploadText {
     letter-spacing: 0;
     color: #A03400;
     padding: 5px 10px;
+    font-family: 'Roboto', sans-serif;
+  }
+  .alertError {
+    letter-spacing: 0;
+    color: #ec0000;
     font-family: 'Roboto', sans-serif;
   }
 }
